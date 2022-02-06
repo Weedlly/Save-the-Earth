@@ -34,3 +34,42 @@ bool SDLCommonFunction::LoadContent(int x, int y, string content) {
 	/*TextObject*/
 	return true;
 }
+
+bool SDLCommonFunction::CollisionCheck(SDL_Rect obj1, SDL_Rect obj2, double r, int oj2_width, int oj2_length) {
+	double R = pow(r,2);
+	obj1.x += r;
+	obj1.y += r;
+	for (int i = obj2.x; i <= obj2.x + oj2_width; i++)
+	{
+		double D = pow(i - obj1.x, 2) + pow(obj2.y - obj1.y, 2);
+		if (D < R)
+		{
+			return true;
+		}
+	}
+	for (int i = obj2.x; i <= obj2.x + oj2_width; i++)
+	{
+		double D = pow(i - obj1.x, 2) + pow(oj2_length + obj2.y - obj1.y, 2);
+		if (D < R)
+		{
+			return true;
+		}
+	}
+	for (int i = obj2.y; i <= obj2.y + oj2_length; i++)
+	{
+		double D = pow(obj2.x - obj1.x, 2) + pow(i - obj1.y, 2);
+		if (D < R)
+		{
+			return true;
+		}
+	}
+	for (int i = obj2.y; i <= obj2.y + oj2_length; i++)
+	{
+		double D = pow(oj2_width + obj2.x - obj1.x, 2) + pow(i - obj1.y, 2);
+		if (D < R)
+		{
+			return true;
+		}
+	}
+	return false;
+}

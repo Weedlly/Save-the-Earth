@@ -1,0 +1,35 @@
+object:
+- Quăng liên tục thông điệp 5k
+- Mạng 1
+- Khả năng bắn kim tiêm giải quyết toàn bộ các đối tượng hiện tại và gây sát thương lên boss 10 dame
+Boss :
+- Khả năng di chuyển : sử dụng random 
++ Boss sẽ random 1 vị trí x,y ngẫu nhiên và phương trình từ x,y hiện tại tới x,y ngẫu nhiên sẽ được tạo ra
+
+- Máu 100 
+- Skill : bắn ra F0
+- 
+
+Kịch bản:
+Không gian : Background đường phố
+Vị trí : 
++ Boss giữa phía trên
++ Human giữa phía dưới
+
+Cảnh 1:
++ Chuông báo động đỏ
++ Human xuất hiện
+Cảnh 2:
++ Boss xuất hiện
++ Boss bắn ngẫu nhiên F0
+Cảnh 3:
++ Khi boss còn 50% máu, boss sẽ bắn kim tiêm theo vòng tròn toả ra
+
+Hiệu ứng và âm thanh:
+Đạn
+Va chạm 
++ Giữa đạn và boss
++ Giữa F0 và Human (End game)
+
+
+
