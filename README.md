@@ -8,3 +8,4 @@ I) The Earth
 
 II) Rule
 - You will be die if you touch the Viruts or F0 
+- Detroy the boss to win
